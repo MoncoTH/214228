@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^5.1.0"
+  },
+  "scripts": {
+    "scss": "node-sass -o assets/css assets/sass",
+    "serve": "browser-sync start --server --files 'assets/css/*.css, *.html'",
+    "watch:css": "onchange 'assets/sass' -- npm run scss",
+    "start": "run-p served watch:css"
+  }
+}
